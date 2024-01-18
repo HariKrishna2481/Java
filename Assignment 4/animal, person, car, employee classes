@@ -1,0 +1,71 @@
+// Animal class
+class Animal {
+    
+    String species;
+    int age;
+
+
+    public Animal(String species, int age) {
+        this.species = species;
+        this.age = age;
+    }
+
+
+    public void makeSound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+// Car class
+class Car {
+    String brand;
+    String model;
+    int year;
+
+    
+    public Car(String brand, String model, int year) {
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
+    }
+
+    
+    public void startEngine() {
+        System.out.println("Car engine started");
+    }
+}
+
+// Person class
+class Person {
+    
+    String name;
+    int age;
+
+    
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public void introduce() {
+        System.out.println("Hello, I am " + name + " and I am " + age + " years old.");
+    }
+}
+
+// Employee class (extends Person)
+class Employee extends Person {
+    
+    String employeeId;
+    double salary;
+
+    public Employee(String name, int age, String employeeId, double salary) {
+        super(name, age); // Call the constructor of the superclass (Person)
+        this.employeeId = employeeId;
+        this.salary = salary;
+    }
+
+    public void displayEmployeeInfo() {
+        System.out.println("Employee ID: " + employeeId);
+        System.out.println("Salary: $" + salary);
+    }
+}
